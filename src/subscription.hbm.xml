@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="gym.model.elements.Subscription" table="Subscription">
+		<id name="id" column="Subscription_ID" type="java.lang.Long" />
+		<property name="start" column="Subscription_Start" type="java.util.Date" />
+		<property name="finish" column="Subscription_Finish" type="java.util.Date" />
+		<property name="months" column="Subscription_Month" type="java.lang.Integer" />
+		<property name="price" column="Subscription_Price" type="java.lang.Double" />
+<!-- 		<many-to-one name="subscriptionType" column="Subscription_Type_ID" class="gym.model.elements.SubscriptionType" lazy="false"/> -->
+		<many-to-one name="subscriptionType" column="Subscription_Type" class="gym.model.elements.SubscriptionType" lazy="false"/>
+		
+		<many-to-one name="gym" column="GYM_ID" class="gym.model.elements.Gym" lazy="false"/>
+		<many-to-one name="client" column="Client_ID" class="gym.model.elements.Client" lazy="false"/>
+		<many-to-one name="coach" column="Coach_ID" class="gym.model.elements.Coach" lazy="false"/>
+	</class>
+</hibernate-mapping>

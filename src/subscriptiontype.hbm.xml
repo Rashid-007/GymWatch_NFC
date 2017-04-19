@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="gym.model.elements.SubscriptionType" table="Subscription_Type">
+		<id name="id" column="Subscription_Type_ID" type="java.lang.Integer" />
+		<property name="name" column="Subscription_Type_Name" type="java.lang.String" />
+		<property name="pricePerMonth" column="Subscription_Type_PricePerMonth" type="java.lang.Double" />
+		<property name="desc" column="Subscription_Type_Description" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

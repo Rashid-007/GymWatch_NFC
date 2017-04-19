@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="gym.model.elements.WebInfo" table="WEB_INFO">
+		<id name="id" column="ID" type="java.lang.String" />
+		<property name="pass" column="PASSWORD" type="java.lang.String" />
+		<property name="login" column="LOGIN" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="gym.model.elements.Coach" table="Coach">
+		<id name="id" column="Coach_ID" type="java.lang.Integer" />
+		<property name="name" column="Coach_Name" type="java.lang.String" />
+		<property name="phone" column="Coach_Phone" type="java.lang.String" />
+		<property name="info" column="Coach_Info" type="java.lang.String" />
+		<many-to-one name="gym" column="GYM_GYM_ID" class="gym.model.elements.Gym" lazy="false"/>
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="gym.model.elements.Client" table="Client">
+		<id name="id" column="Client_ID" type="java.lang.String" />
+		<property name="email" column="Client_email" type="java.lang.String" />
+		<property name="name" column="Client_name" type="java.lang.String" />
+		<property name="bddate" column="Client_BirthDate" type="java.util.Date" />
+		<property name="gender" column="Client_Gender" type="java.lang.String" />
+		<property name="phone" column="Client_Phone" type="java.lang.String" />
+		<property name="address" column="Client_Address" type="java.lang.String" />
+	</class>
+</hibernate-mapping>

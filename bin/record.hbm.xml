@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="gym.model.elements.Record" table="Record">
+		<id name="timestamp" column="Timestamp" type="java.util.Date" />
+		<many-to-one name="client" column="Person_Person_ID" class="gym.model.elements.Client" lazy="false"/>
+		<many-to-one name="gym" column="GYM_GYM_ID" class="gym.model.elements.Gym" lazy="false"/>
+	</class>
+</hibernate-mapping>
